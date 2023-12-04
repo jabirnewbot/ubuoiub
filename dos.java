@@ -70,7 +70,7 @@ public class Dos implements Runnable {
     private static List<String> getProxies() {
         List<String> proxyList = new ArrayList<>();
         try {
-            URL url = new URL("https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks5&timeout=10000&country=all&ssl=all&anonymity=all");
+            URL url = new URL("https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt");
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
             BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
